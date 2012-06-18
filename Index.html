@@ -1,1 +1,26 @@
-<p>Alex is the best</p>
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+
+		<title>Stamper</title>
+
+		<link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
+		
+		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/jquery-1.7.2.min" type="text/javascript" charset="utf-8"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.post('http://www.stamper.co.il/he/mobile/a/magazin/main.aspx', function (data) {
+                    $('#MainContent').html(data);
+                });
+            })
+        </script>
+	</head>
+	<body>
+ 		<div id="MainContent">
+        
+        </div>
+	</body>
+</html>
