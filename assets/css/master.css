@@ -9,8 +9,8 @@ p				{ direction: rtl; margin-top: 0px; margin-bottom: 0px; }
 #MagazinAll         { margin-right:10px; }
 #MagazinHeadline    { font-size:20px; border-bottom:1px solid gray; padding-bottom:10px; margin-bottom:20px; }
 
-.ArticalDiv         { overflow:auto; border-bottom:1px solid gray; padding-bottom:10px; margin-bottom:20px; width:100%; }
+.ArticalDiv         { overflow:auto; border-bottom:1px solid gray; padding-bottom:10px; margin-bottom:20px; width:300px; }
 .ArticalImg         { float:right; width:100px; height:80px; border:0px; margin-left:10px; }
-.ArticalDetails     { float:right; }
+.ArticalDetails     { float:right; min-width:200px; }
 a.ArticalLabel      { text-decoration:none; font-size:16px; margin-bottom:3px; display:block; }
 .ArticalAuther      { margin-bottom:10px; }
