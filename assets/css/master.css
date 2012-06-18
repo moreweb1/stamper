@@ -4,7 +4,13 @@ td				{ vertical-align: top; padding: 0px; }
 p				{ direction: rtl; margin-top: 0px; margin-bottom: 0px; }
 
 #LogoDiv        { margin-bottom:20px; }
-#LogoImg        { width:200px; height:45px; border:0px; }
+#LogoImg        { width:250px; height:45px; border:0px; margin-right:10px; margin-top:10px; }
 
-.ArticalDiv     { width:200px; overflow:auto; margin-bottom:10px; }
-.ArticalImg     { float:right; width:80px; height:60px; border:0px; margin-left:10px; }
+#MagazinAll         { margin-right:10px; }
+#MagazinHeadline    { font-size:20px; border-bottom:1px solid gray; padding-bottom:10px; margin-bottom:20px; }
+
+.ArticalDiv         { overflow:auto; border-bottom:1px solid gray; padding-bottom:10px; margin-bottom:20px; width:100%; }
+.ArticalImg         { float:right; width:100px; height:80px; border:0px; margin-left:10px; }
+.ArticalDetails     { float:right; }
+a.ArticalLabel      { text-decoration:none; font-size:16px; margin-bottom:3px; display:block; }
+.ArticalAuther      { margin-bottom:10px; }
