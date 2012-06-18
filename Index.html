@@ -12,13 +12,15 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                $.post("http://www.stamper.co.il/he/mobile/a/magazin/main.aspx", function (data) {
+                //alert("a");
+                $.post("http://localhost:55182/He/mobile/magazin/Main.aspx", function (data) {
                     $('#MainContent').html(data);
                 });
             })
         </script>
 	</head>
 	<body>
+        <div id="LogoDiv"><img id="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
  		<div id="MainContent">
         
         </div>
