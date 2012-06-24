@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.phonegap.getting.started"
+	version 	= "1.0.0">
+
+	<name>Stmaper</name>
+
+	<description>
+		Stmaper
+	</description>
+
+	<author href="http://alunny.github.com">
+		Stamper
+	</author>
+
+	<icon src="icon.png" gap:role="default" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	
+</widget>
