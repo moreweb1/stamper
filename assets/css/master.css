@@ -3,6 +3,7 @@ table			{ padding: 0px; margin: 0px; }
 td				{ vertical-align: top; padding: 0px; }
 p				{ direction: rtl; margin-top: 0px; margin-bottom: 0px; }
 
-#LogoDiv        { margin-bottom:20px; }
-#LogoImg        { width:250px; height:45px; border:0px; margin-right:10px; margin-top:10px; }
-a#RefreshButton  { margin-right:10px; margin-bottom:20px; }
+#LogoDiv            { margin-bottom:20px; }
+#LogoImg            { width:250px; height:45px; border:0px; margin-right:10px; margin-top:10px; }
+a#RefreshButton     { margin-right:10px; }
+#MainContent        { margin-top:20px; margin-right:10px; margin-left:10px; }
