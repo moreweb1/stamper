@@ -16,10 +16,17 @@
                     $('#MainContent').html(data);
                 });
             })
+
+            function RefreshApp() {
+                $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
+                    $('#MainContent').html(data);
+                });
+            }
         </script>
 	</head>
 	<body>
         <div id="LogoDiv"><img id="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
+        <input id="RefreshButton" type="button" onclick="RefreshApp(); return false;" value="רענן" />
  		<div id="MainContent">
         
         </div>
