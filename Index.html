@@ -17,13 +17,13 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
-                    $('#MainContent').html(data);
+                    $('#MainContentDiv').html(data);
                 });
             })
 
             function RefreshApp() {
                 $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
-                    $('#MainContent').html(data);
+                    $('#MainContentDiv').html(data);
                 });
             }
         </script>
@@ -46,19 +46,41 @@
         <div>
             <div>
                 <div id="LogoDiv"><img id="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                <a href="" id="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
+                <a href="#MainContent" id="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
             </div>
 
  		    <div id="MainContent" data-role="page">
+                 <div data-role="header">
+                    <div class="LogoDiv"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
+                    <a href="" class="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
+                </div>
+
+                <div id="MainContentDiv" data-role="content">
             
+                </div>
+
+                <div data-role="footer">
+		            <h4>Page Footer</h4>
+	            </div>
             </div>
 
             <div>
 		        <h4>Page Footer</h4>
 	        </div>
 
-            <div data-role="page" id="MagazineArticalViewDiv">
-                sdfsf sdf sdf
+            <div data-role="page" id="SubContent">
+                 <div data-role="header">
+                    <div class="LogoDiv"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
+                    <a href="#MainContent" class="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
+                </div>
+
+                <div id="SubContentDiv" data-role="content">
+                    sdfsf sdf sdf            
+                </div>
+
+                <div data-role="footer">
+		            <h4>Page Footer</h4>
+	            </div>
             </div>
 
         </div>
