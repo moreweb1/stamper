@@ -29,11 +29,19 @@
         </script>
 	</head>
 	<body>
-        <div id="LogoDiv"><img id="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-        <!--<input id="RefreshButton" type="button" onclick="RefreshApp(); return false;" value="רענן" />-->
-        <a href="" id="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
- 		<div id="MainContent" data-role="page">
+        <div data-role="page">
+            <div data-role="header">
+                <div id="LogoDiv"><img id="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
+                <a href="" id="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
+            </div>
+ 		    <div id="MainContent" data-role="content">
             
+            </div>
+
+            <div data-role="footer">
+		        <h4>Page Footer</h4>
+	        </div>
+
         </div>
 	</body>
 </html>
