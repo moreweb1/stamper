@@ -16,15 +16,23 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
+                jQuery.ajaxSetup({ async: false });
+                $.mobile.showPageLoadingMsg();
                 $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
                     $('#MainContentDiv').html(data);
                 });
+                $.mobile.hidePageLoadingMsg();
+                jQuery.ajaxSetup({ async: true });
             })
 
             function RefreshApp() {
+                jQuery.ajaxSetup({ async: false });
+                $.mobile.showPageLoadingMsg();
                 $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
                     $('#MainContentDiv').html(data);
                 });
+                $.mobile.hidePageLoadingMsg();
+                jQuery.ajaxSetup({ async: true });
             }
         </script>
 	</head>
@@ -46,14 +54,14 @@
         <div>
             <div>
                 <div id="LogoDiv"><img id="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                <a href="#MainContent" id="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
+                <a href="#MainContent" id="RefreshButton" onclick="RefreshApp();">רענן</a>
             </div>
 
  		    <div id="MainContent" data-role="page">
                  <div data-role="header">
                     <h1>aa</h1>
                     <div class="LogoDiv"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                    <a href="" class="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
+                    <a href="" class="RefreshButton" onclick="RefreshApp();">רענן</a>
                 </div>
 
                 <div id="MainContentDiv" data-role="content">
