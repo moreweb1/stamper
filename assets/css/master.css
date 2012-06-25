@@ -4,7 +4,7 @@ td				{ vertical-align: top; padding: 0px; }
 p				{ direction: rtl; margin-top: 0px; margin-bottom: 0px; }
 
 .LogoDiv            { margin-bottom:20px; }
-.LogoImg            { width:250px; height:45px; border:0px; margin-right:10px; margin-top:10px; }
+.LogoImg            { width:250px; height:45px; border:0px; margin-right:5px; margin-top:10px; }
 a.HeaderButton      { display:block; }
 #MainContentDiv     { margin-top:20px; margin-right:10px; margin-left:10px; }
 #SubContentDiv      { margin-top:20px; margin-right:10px; margin-left:10px; }
