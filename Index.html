@@ -16,27 +16,31 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                jQuery.ajaxSetup({ async: false });
+                //jQuery.ajaxSetup({ async: false });
                 //$.mobile.showPageLoadingMsg();
-                $(".ui-loader").css("display", "block");
+                //$(".ui-loader").css("display", "block");
+                $.support.cors = true;
+                $.mobile.allowCrossDomainPages = true;
                 $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
                     $('#MainContentDiv').html(data);
                 });
-                $(".ui-loader").css("display", "none");
+                //$(".ui-loader").css("display", "none");
                 //$.mobile.hidePageLoadingMsg();
-                jQuery.ajaxSetup({ async: true });
+                //jQuery.ajaxSetup({ async: true });
             })
 
             function RefreshApp() {
-                jQuery.ajaxSetup({ async: false });
+                //jQuery.ajaxSetup({ async: false });
                 //$.mobile.showPageLoadingMsg();
-                $(".ui-loader").css("display", "block");
+                //$(".ui-loader").css("display", "block");
+                $.support.cors = true;
+                $.mobile.allowCrossDomainPages = true;
                 $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
                     $('#MainContentDiv').html(data);
                 });
-                $(".ui-loader").css("display", "none");
+                //$(".ui-loader").css("display", "none");
                 //$.mobile.hidePageLoadingMsg();
-                jQuery.ajaxSetup({ async: true });
+                //jQuery.ajaxSetup({ async: true });
             }
         </script>
 	</head>
