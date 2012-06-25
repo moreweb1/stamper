@@ -16,109 +16,18 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                //jQuery.ajaxSetup({ async: false });
-                //$.mobile.showPageLoadingMsg();
-                //$(".ui-loader").css("display", "block");
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
-                $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
-                    $('#MainContentDiv').html(data);
+                $.post("http://www.stamper.co.il/He/mobile/magazin/Default.aspx", function (data) {
+                    $('#StamperApp').html(data);
                 });
-                //$(".ui-loader").css("display", "none");
-                //$.mobile.hidePageLoadingMsg();
-                //jQuery.ajaxSetup({ async: true });
+                
             })
-
-            function RefreshApp() {
-                //jQuery.ajaxSetup({ async: false });
-                //$.mobile.showPageLoadingMsg();
-                //$(".ui-loader").css("display", "block");
-                $.support.cors = true;
-                $.mobile.allowCrossDomainPages = true;
-                $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
-                    $('#MainContentDiv').html(data);
-                });
-                //$(".ui-loader").css("display", "none");
-                //$.mobile.hidePageLoadingMsg();
-                //jQuery.ajaxSetup({ async: true });
-            }
-
-            var menuOpen = false;
-            function OpenMenu() {
-                if (menuOpen == false) {
-                    $(".ddMenu").css("visibility", "visible");
-                    menuOpen = true;
-                }
-                else {
-                    $(".ddMenu").css("visibility", "hidden");
-                    menuOpen = false;
-                }
-            }
         </script>
 	</head>
 	<body>
-        <div>
- 		    <div id="MainContent" data-role="page" >
-                 <div data-role="header" style="height:90px;">
-                    <div style="float:right; margin-left:0px;">
-                        <div style="margin-bottom:7px; margin-top:10px;">
-                            <a data-role="button" href="" class="HeaderButton" style="display:block;" onclick="RefreshApp();">Refresh</a>
-                        </div>
-                        <div id="CatalogMenu">   
-                            <div class="menuButton" >   
-                                <a data-role="button" href="" class="HeaderButton" style="display:block; width:70px;" onclick="OpenMenu();">Menu</a>
-                                <div class="ddMenu" >
-                                    <div class="ddMenuBox" >
-                                        <table border="0" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td class="ddSubMenu">        
-                                                <div class="ddMenuSubject">
-                                                    <a href="">about</a>
-                                                </div>                            
-                                                <div class="ddMenuSubject">
-                                                    <a href="">about</a>
-                                                </div>
-                                                <div class="ddMenuSubject">
-                                                    <a href="">about</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="LogoDiv" style="float:right;"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                </div>
-
-                <div id="MainContentDiv" data-role="content">
-            
-                </div>
-
-                <div data-role="footer">
-		            <h4>Page Footer</h4>
-	            </div>
-            </div>
-
-            <!--<div>
-		        <h4>Page Footer</h4>
-	        </div>-->
-
-            <div data-role="page" id="SubContent">
-                 <div data-role="header">
-                    <div class="LogoDiv"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                    <a href="#MainContent" class="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
-                </div>
-
-                <div id="SubContentDiv" data-role="content">
-                    sdfsf sdf sdf            
-                </div>
-
-                <div data-role="footer">
-		            <h4>Page Footer</h4>
-	            </div>
-            </div>
+        <div id="StamperApp">
+ 		    
 
         </div>
 	</body>
