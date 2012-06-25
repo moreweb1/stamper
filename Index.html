@@ -42,33 +42,57 @@
                 //$.mobile.hidePageLoadingMsg();
                 //jQuery.ajaxSetup({ async: true });
             }
+
+            var menuOpen = false;
+            function OpenMenu() {
+                if (menuOpen == false) {
+                    //$(".menuButton").attr("class", "menuButtonH");
+                    $(".ddMenu").css("visibility", "visible");
+                    menuOpen = true;
+                }
+                else {
+                    //$(".menuButton").attr("class", "menuButton");
+                    $(".ddMenu").css("visibility", "hidden");
+                    menuOpen = false;
+                }
+                //alert(menuOpen);
+            }
         </script>
 	</head>
 	<body>
-        <!--<div data-role="page">
-            <div data-role="header">
-                <div id="LogoDiv"><img id="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                <a href="" id="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
-            </div>
- 		    <div id="MainContent" data-role="content">
-            
-            </div>
-
-            <div data-role="footer">
-		        <h4>Page Footer</h4>
-	        </div>
-
-        </div>-->
         <div>
-            <div>
-                <div id="LogoDiv"><img id="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                <a href="#MainContent" id="RefreshButton" onclick="RefreshApp();">רענן</a>
-            </div>
-
- 		    <div id="MainContent" data-role="page">
-                 <div data-role="header">
-                    <div class="LogoDiv"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                    <a href="" class="RefreshButton" onclick="RefreshApp();">רענן</a>
+ 		    <div id="MainContent" data-role="page" >
+                 <div data-role="header" style="height:90px;">
+                    <div style="float:right; margin-left:10px;">
+                        <div style="margin-bottom:7px; margin-top:10px;">
+                            <a data-role="button" href="" class="HeaderButton" style="display:block;" onclick="RefreshApp();">Refresh</a>
+                        </div>
+                        <div id="CatalogMenu">   
+                            <div class="menuButton" >   
+                                <a data-role="button" href="" class="HeaderButton" style="display:block; width:70px;" onclick="OpenMenu();">Menu</a>
+                                <div class="ddMenu" >
+                                    <div class="ddMenuBox" >
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td class="ddSubMenu">        
+                                                <div class="ddMenuSubject">
+                                                    <a href="">about</a>
+                                                </div>                            
+                                                <div class="ddMenuSubject">
+                                                    <a href="">about</a>
+                                                </div>
+                                                <div class="ddMenuSubject">
+                                                    <a href="">about</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="LogoDiv" style="float:right;"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
                 </div>
 
                 <div id="MainContentDiv" data-role="content">
@@ -80,9 +104,9 @@
 	            </div>
             </div>
 
-            <div>
+            <!--<div>
 		        <h4>Page Footer</h4>
-	        </div>
+	        </div>-->
 
             <div data-role="page" id="SubContent">
                  <div data-role="header">
