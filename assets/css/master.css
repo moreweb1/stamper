@@ -13,8 +13,8 @@ a.HeaderButton      { display:block; }
 
 #CatalogMenu .menuButton        { display:block; float:right; position:relative; color:White; padding-left:0px; padding-right:0px; height:22px; }
 
-#CatalogMenu .ddMenu                    { background-color:Black; position:absolute; z-index:500; right:0px; margin-top:10px; padding:10px 0px 0px 0px; width:250px;  }
-#CatalogMenu .menuButton .ddMenu        { visibility:hidden; }
+#CatalogMenu .ddMenu                    { background-color:Black; position:absolute; z-index:500; right:0px; margin-top:10px; padding:10px 0px 0px 0px; width:250px; }
+#CatalogMenu .menuButton .ddMenu        {  }
 
 #CatalogMenu .ddSubMenu                 { padding-left:10px; padding-right:20px; }
 

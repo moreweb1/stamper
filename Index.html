@@ -18,6 +18,7 @@
                 //jQuery.ajaxSetup({ async: false });
                 //$.mobile.showPageLoadingMsg();
                 //$(".ui-loader").css("display", "block");
+                $(".ddMenu").hide();
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
                 $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
@@ -45,11 +46,13 @@
             var menuOpen = false;
             function OpenMenu() {
                 if (menuOpen == false) {
-                    $(".ddMenu").css("visibility", "visible");
+
+                    $(".ddMenu").slideDown();
+                    
                     menuOpen = true;
                 }
                 else {
-                    $(".ddMenu").css("visibility", "hidden");
+                    $(".ddMenu").slideUp();
                     menuOpen = false;
                 }
             }
