@@ -4,7 +4,6 @@
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
 
 		<title>Stamper</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
         <link href="assets/js/jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css" />
@@ -19,16 +18,20 @@
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
                 $.post("http://www.stamper.co.il/He/mobile/magazin/Default.aspx", function (data) {
-                    $('#StamperApp').html(data);
+                    $('#MainContent').html(data);
                 });
-                
+                $.support.cors = true;
+                $.mobile.allowCrossDomainPages = true;
+                $.post("http://www.stamper.co.il/He/mobile/magazin/SubDefault.aspx", function (data) {
+                    $('#SubContent').html(data);
+                });
             })
         </script>
 	</head>
 	<body>
-        <div id="StamperApp">
- 		    
-
+        <div id="MainContent" data-role="page" style="margin-top:20px; margin-right:10px; margin-left:10px;">
+        </div>
+        <div id="SubContent" data-role="page" style="margin-top:20px; margin-right:10px; margin-left:10px;">
         </div>
 	</body>
 </html>
