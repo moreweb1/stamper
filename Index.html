@@ -109,8 +109,36 @@
 
             <div data-role="page" id="SubContent">
                  <div data-role="header">
+                    <div style="float:right; margin-left:10px;">
+                        <div style="margin-bottom:7px; margin-top:10px;">
+                            <a data-role="button" href="" class="HeaderButton" style="display:block;" onclick="RefreshApp();">Refresh</a>
+                        </div>
+                        <div id="Div1">   
+                            <div class="menuButton" >   
+                                <a data-role="button" href="" class="HeaderButton" style="display:block; width:70px;" onclick="OpenMenu();">Menu</a>
+                                <div class="ddMenu" >
+                                    <div class="ddMenuBox" >
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td class="ddSubMenu">        
+                                                <div class="ddMenuSubject">
+                                                    <a href="">about</a>
+                                                </div>                            
+                                                <div class="ddMenuSubject">
+                                                    <a href="">about</a>
+                                                </div>
+                                                <div class="ddMenuSubject">
+                                                    <a href="">about</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
                     <div class="LogoDiv"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
-                    <a href="#MainContent" class="RefreshButton" onclick="RefreshApp(); return false;">רענן</a>
                 </div>
 
                 <div id="SubContentDiv" data-role="content">
