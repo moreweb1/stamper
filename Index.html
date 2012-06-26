@@ -5,8 +5,9 @@
 
 		<title>Stamper</title>
 
-		<link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
+		
         <link href="assets/js/jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
 		
 		<script src="assets/js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="assets/js/jquery.mobile-1.1.0.js" type="text/javascript"></script>
@@ -18,18 +19,28 @@
                 document.addEventListener("deviceready", onDeviceReady, false);
              }
 
-             function onDeviceReady() {
+            function onDeviceReady() {
                 document.addEventListener("menubutton", onMenuKeyDown, false);
-                window.addEventListener("batterystatus", onBatteryStatus, false);
+                document.addEventListener("backbutton", onBackKeyDown, false);
             }
 
-            function onBatteryStatus(info) {
-                alert(info);
-                console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
-            }
+            var menuButtonOpen = false;
 
             function onMenuKeyDown() {
-                alert("a");
+                if (menuButtonOpen == false) {
+                    menuButtonOpen = true;
+                    $(".menuButtonDiv").slideDown();
+                }
+                else {
+                    menuButtonOpen = false;
+                    $(".menuButtonDiv").slideUp();
+                }
+
+            }
+
+            function onBackKeyDown() {
+                $(".menuButtonDiv").hide();
+                menuButtonOpen = false;
             }
 
         </script>
@@ -37,41 +48,14 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $(".ddMenu").hide();
+                $(".menuButtonDiv").hide();
                 RefreshApp();
-                //jQuery.ajaxSetup({ async: false });
-                //$.mobile.showPageLoadingMsg();
-                //$(".ui-loader").css("display", "block");
-                //                $(".ddMenu").hide();
-                //                $.support.cors = true;
-                //                $.mobile.allowCrossDomainPages = true;
-                //                $.post("http://localhost:50775/He/mobile/magazin/Main.aspx", function (data) {
-                //                                    $('#MainContentDiv').html(data);
-                //                                });
-                //                $.ajax({
-                //                    type: 'POST',
-                //                    url: 'http://localhost:50775/He/mobile/magazin/Main.aspx',
-                //                    crossDomain: true,
-                //                    //data: '{"some":"json"}',
-                //                    dataType: "html",
-                //                    success: function (responseData, textStatus, jqXHR) {
-                //                        var value = responseData.someKey;
-                //                        alert(value);
-                //                    },
-                //                    error: function (responseData, textStatus, errorThrown) {
-                //                        alert('POST failed.');
-                //                    }
-                //                })
-                //                .done(function (html) {
-                //                    $("#MainContentDiv").append(html);
-                //                });
-                //$(".ui-loader").css("display", "none");
-                //$.mobile.hidePageLoadingMsg();
-                //jQuery.ajaxSetup({ async: a });
             })
 
             function RefreshApp() {
                 jQuery.ajaxSetup({ async: false });
                 $(".ddMenu").hide();
+                $(".menuButtonDiv").hide();
                 //$.mobile.showPageLoadingMsg();
                 //$(".ui-loader").css("display", "block");
                 $.support.cors = true;
@@ -106,6 +90,7 @@
                     <div style="float:right; margin-left:10px;">
                         <div style="margin-bottom:7px; margin-top:10px;">
                             <a data-role="button" href="" class="HeaderButton" style="display:block;" onclick="RefreshApp();">Refresh</a>
+                            <a href="" onclick="onMenuKeyDown()">asdasd</a>
                         </div>
                         <div class="CatalogMenu">   
                             <div class="menuButton" >   
@@ -140,6 +125,17 @@
                 </div>
 
                 <div data-role="footer">
+                    <div class="menuButtonDiv" style="">
+                        <div class="menuButtonDivInner">
+                            <a class="menuButtonDivInnerA" style="color:White;" href="">about</a>
+                        </div>                            
+                        <div class="menuButtonDivInner">
+                            <a class="menuButtonDivInnerA" style="color:White;" href="">about</a>
+                        </div>
+                        <div class="menuButtonDivInner">
+                            <a class="menuButtonDivInnerA" style="color:White;" href="">about</a>
+                        </div>
+                    </div>
 		            <h4>Page Footer</h4>
 	            </div>
             </div>
@@ -185,6 +181,17 @@
                 </div>
 
                 <div data-role="footer">
+                    <div class="menuButtonDiv" style="">
+                        <div class="menuButtonDivInner">
+                            <a class="menuButtonDivInnerA" style="color:White;" href="">about</a>
+                        </div>                            
+                        <div class="menuButtonDivInner">
+                            <a class="menuButtonDivInnerA" style="color:White;" href="">about</a>
+                        </div>
+                        <div class="menuButtonDivInner">
+                            <a class="menuButtonDivInnerA" style="color:White;" href="">about</a>
+                        </div>
+                    </div>
 		            <h4>Page Footer</h4>
 	            </div>
             </div>
