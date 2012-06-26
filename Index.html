@@ -21,6 +21,7 @@
 
             function onDeviceReady() {
                 document.addEventListener("menubutton", onMenuKeyDown, false);
+                document.addEventListener("touchmove", onTouchMove, false);
                 //document.addEventListener("backbutton", onBackKeyDown, false);
             }
 
@@ -36,6 +37,29 @@
                     $(".menuButtonDiv").slideUp();
                 }
 
+            }
+
+            function onTouchMove(event) {
+                //for (var i=0; i< event.touches.length; i++){
+                //	var x = event.touches[0].pageX; 
+                //	var y = event.touches[0].pageY;
+                //	alert(x + " " + y);
+                //}
+                //var x = event.touches[0].pageX; 
+                //var y = event.touches[0].pageY; 
+                //alert(x + " " + y);
+                //x = event.touches[touches.length - 1].pageX; 
+                //y = event.touches[touches.length - 1].pageY;
+                //alert(x + " " + y);
+
+                var startX = event.touches[0].pageX;
+                var endX = event.touches[event.touches.length - 1].pageX;
+                alert(startX + " " + endX);
+                //if (startX - endX < 0){
+                //alert("right");
+                //} else if (startX - endX > 0){
+                //alert("left");
+                //}
             }
 
             function onBackKeyDown() {

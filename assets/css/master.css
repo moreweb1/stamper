@@ -24,6 +24,6 @@ a.HeaderButton      { display:block; }
 .CatalogMenu .ddMenuSubject a:visited   { color:white; text-decoration:none; }
 .CatalogMenu .ddMenuSubject a:hover     { color:white; text-decoration:none; }
 
-.menuButtonDiv          { position:fixed; left:0px; bottom:20px; width:230px; background-color:Black; padding-top:15px; padding-right:20px; }
+.menuButtonDiv          { position:fixed; left:0px; bottom:0px; width:230px; background-color:Black; padding-top:15px; padding-right:20px; }
 .menuButtonDivInner     { padding-top:4px; padding-right:4px; margin-bottom:4px; } 
 a.menuButtonDivInnerA   { font:11px; text-decoration:none; font-size:11px; }
