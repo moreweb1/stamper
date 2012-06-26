@@ -9,17 +9,17 @@ a.HeaderButton      { display:block; }
 #MainContentDiv     { margin-top:20px; margin-right:10px; margin-left:10px; }
 #SubContentDiv      { margin-top:20px; margin-right:10px; margin-left:10px; }
 
-#CatalogMenu                    { font-weight:normal; font-size:19px; }
+.CatalogMenu                    { font-weight:normal; font-size:19px; }
 
-#CatalogMenu .menuButton        { display:block; float:right; position:relative; color:White; padding-left:0px; padding-right:0px; height:22px; }
+.CatalogMenu .menuButton        { display:block; float:right; position:relative; color:White; padding-left:0px; padding-right:0px; height:22px; }
 
-#CatalogMenu .ddMenu                    { background-color:Black; position:absolute; z-index:500; right:0px; margin-top:10px; padding:10px 0px 0px 0px; width:250px; }
-#CatalogMenu .menuButton .ddMenu        {  }
+.CatalogMenu .ddMenu                    { background-color:Black; position:absolute; z-index:500; right:0px; margin-top:10px; padding:10px 0px 0px 0px; width:250px; }
+.CatalogMenu .menuButton .ddMenu        {  }
 
-#CatalogMenu .ddSubMenu                 { padding-left:10px; padding-right:20px; }
+.CatalogMenu .ddSubMenu                 { padding-left:10px; padding-right:20px; }
 
-#CatalogMenu .ddMenuBox                 { padding-top:4px; padding-left:4px; overflow:auto}
-#CatalogMenu .ddMenuSubject             { margin-bottom:4px; padding-left:20px } 
-#CatalogMenu .ddMenuSubject a           { color:white; text-decoration:none; font-size:11px; margin:0px; }
-#CatalogMenu .ddMenuSubject a:visited   { color:white; text-decoration:none; }
-#CatalogMenu .ddMenuSubject a:hover     { color:white; text-decoration:none; }
+.CatalogMenu .ddMenuBox                 { padding-top:4px; padding-left:4px; overflow:auto}
+.CatalogMenu .ddMenuSubject             { margin-bottom:4px; padding-left:20px } 
+.CatalogMenu .ddMenuSubject a           { color:white; text-decoration:none; font-size:11px; margin:0px; }
+.CatalogMenu .ddMenuSubject a:visited   { color:white; text-decoration:none; }
+.CatalogMenu .ddMenuSubject a:hover     { color:white; text-decoration:none; }

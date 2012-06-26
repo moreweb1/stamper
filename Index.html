@@ -14,23 +14,64 @@
         <script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
 
         <script type="text/javascript">
+            function onLoad() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+             }
+
+             function onDeviceReady() {
+                document.addEventListener("menubutton", onMenuKeyDown, false);
+                window.addEventListener("batterystatus", onBatteryStatus, false);
+            }
+
+            function onBatteryStatus(info) {
+                alert(info);
+                console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+            }
+
+            function onMenuKeyDown() {
+                alert("a");
+            }
+
+        </script>
+
+        <script type="text/javascript">
             $(document).ready(function () {
+                $(".ddMenu").hide();
+                RefreshApp();
                 //jQuery.ajaxSetup({ async: false });
                 //$.mobile.showPageLoadingMsg();
                 //$(".ui-loader").css("display", "block");
-                $(".ddMenu").hide();
-                $.support.cors = true;
-                $.mobile.allowCrossDomainPages = true;
-                $.post("http://www.stamper.co.il/He/mobile/magazin/Main.aspx", function (data) {
-                    $('#MainContentDiv').html(data);
-                });
+                //                $(".ddMenu").hide();
+                //                $.support.cors = true;
+                //                $.mobile.allowCrossDomainPages = true;
+                //                $.post("http://localhost:50775/He/mobile/magazin/Main.aspx", function (data) {
+                //                                    $('#MainContentDiv').html(data);
+                //                                });
+                //                $.ajax({
+                //                    type: 'POST',
+                //                    url: 'http://localhost:50775/He/mobile/magazin/Main.aspx',
+                //                    crossDomain: true,
+                //                    //data: '{"some":"json"}',
+                //                    dataType: "html",
+                //                    success: function (responseData, textStatus, jqXHR) {
+                //                        var value = responseData.someKey;
+                //                        alert(value);
+                //                    },
+                //                    error: function (responseData, textStatus, errorThrown) {
+                //                        alert('POST failed.');
+                //                    }
+                //                })
+                //                .done(function (html) {
+                //                    $("#MainContentDiv").append(html);
+                //                });
                 //$(".ui-loader").css("display", "none");
                 //$.mobile.hidePageLoadingMsg();
-                //jQuery.ajaxSetup({ async: true });
+                //jQuery.ajaxSetup({ async: a });
             })
 
             function RefreshApp() {
-                //jQuery.ajaxSetup({ async: false });
+                jQuery.ajaxSetup({ async: false });
+                $(".ddMenu").hide();
                 //$.mobile.showPageLoadingMsg();
                 //$(".ui-loader").css("display", "block");
                 $.support.cors = true;
@@ -40,7 +81,7 @@
                 });
                 //$(".ui-loader").css("display", "none");
                 //$.mobile.hidePageLoadingMsg();
-                //jQuery.ajaxSetup({ async: true });
+                jQuery.ajaxSetup({ async: true });
             }
 
             var menuOpen = false;
@@ -58,7 +99,7 @@
             }
         </script>
 	</head>
-	<body>
+	<body onload="onLoad()">
         <div>
  		    <div id="MainContent" data-role="page" >
                  <div data-role="header" style="height:90px;">
@@ -66,7 +107,7 @@
                         <div style="margin-bottom:7px; margin-top:10px;">
                             <a data-role="button" href="" class="HeaderButton" style="display:block;" onclick="RefreshApp();">Refresh</a>
                         </div>
-                        <div id="CatalogMenu">   
+                        <div class="CatalogMenu">   
                             <div class="menuButton" >   
                                 <a data-role="button" href="" class="HeaderButton" style="display:block; width:70px;" onclick="OpenMenu();">Menu</a>
                                 <div class="ddMenu" >
@@ -103,17 +144,15 @@
 	            </div>
             </div>
 
-            <!--<div>
-		        <h4>Page Footer</h4>
-	        </div>-->
+           
 
             <div data-role="page" id="SubContent">
-                 <div data-role="header">
+                 <div data-role="header" style="height:90px;">
                     <div style="float:right; margin-left:10px;">
                         <div style="margin-bottom:7px; margin-top:10px;">
-                            <a data-role="button" href="" class="HeaderButton" style="display:block;" onclick="RefreshApp();">Refresh</a>
+                            <a data-role="button" href="#MainContent" class="HeaderButton" style="display:block;" onclick="RefreshApp();">Refresh</a>
                         </div>
-                        <div id="Div1">   
+                        <div class="CatalogMenu">   
                             <div class="menuButton" >   
                                 <a data-role="button" href="" class="HeaderButton" style="display:block; width:70px;" onclick="OpenMenu();">Menu</a>
                                 <div class="ddMenu" >
@@ -138,7 +177,7 @@
                              </div>
                         </div>
                     </div>
-                    <div class="LogoDiv"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
+                    <div class="LogoDiv" style="float:right;"><img class="LogoImg" alt="" src="assets/img/logo_4_site.png"/></div>
                 </div>
 
                 <div id="SubContentDiv" data-role="content">
